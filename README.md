@@ -1,7 +1,7 @@
 <h1> Using ESPNET for training speech to text and text speech modules</h1>
 
 <ul>
-    <li>InstallationProcess provides the steps to install espnet on sagemaker instance with linuxA1 version
+    <li><span style="color:blue">InstallationProcess </span>provides the steps to install espnet on sagemaker instance with linuxA1 version
         <ul>
             <li>Create conda env. using terminal (example name : t2s) <br>
                     conda create --name t2s python=3.8.12</li>
@@ -13,5 +13,8 @@
             <li>Wait for a while for the UI change take into effect</li>
             <li>Run steps in the installationProcess.ipyn</li>      
         </ul>
+    </li>
+        <span style="color:blue">CeckInference</span> uses trained models to convert text into speech
+        
     </li>
  </ul>
