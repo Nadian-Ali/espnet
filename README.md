@@ -11,10 +11,7 @@
             /home/ec2-user/anaconda3/envs/espnet/etc/conda and remove : activare.d and deactivate.d folders </li>
             <li>move to your UI</li>
             <li>Wait for a while for the UI change take into effect</li>
-            <li>Run steps in the installationProcess.ipyn</li>
-            
+            <li>Run steps in the installationProcess.ipyn</li>      
         </ul>
     </li>
-  
-<!--     <li></li> -->
  </ul>
