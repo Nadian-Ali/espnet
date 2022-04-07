@@ -102,10 +102,10 @@ vocoder_file=none  # Vocoder parameter file, If set to none, Griffin-Lim will be
 download_model=""  # Download a model from Model Zoo and use it for decoding.
 
 # [Task dependent] Set the datadir name created by local/data.sh
-train_set="train"     # Name of training set.
-valid_set="valid"     # Name of validation set used for monitoring/tuning network training.
-test_sets="test"     # Names of test sets. Multiple items (e.g., both dev and eval sets) can be specified.
-srctexts=""           # Texts to create token list. Multiple items can be specified.
+train_set=""     # Name of training set.
+valid_set=""     # Name of validation set used for monitoring/tuning network training.
+test_sets=""     # Names of test sets. Multiple items (e.g., both dev and eval sets) can be specified.
+srctexts=""      # Texts to create token list. Multiple items can be specified.
 nlsyms_txt=none  # Non-linguistic symbol list (needed if existing).
 token_type=phn   # Transcription type (char or phn).
 cleaner=tacotron # Text cleaner.
@@ -470,9 +470,7 @@ if ! "${skip_data_prep}"; then
         # NOTE(kamo): Not applying to test_sets to keep original data
         for dset in "${train_set}" "${valid_set}"; do
             # Copy data dir
-            echo ${train_set}
             utils/copy_data_dir.sh "${data_feats}/org/${dset}" "${data_feats}/${dset}"
-            echo "this step was done"
             cp "${data_feats}/org/${dset}/feats_type" "${data_feats}/${dset}/feats_type"
             if [ -e "${data_feats}/org/${dset}/utt2sid" ]; then
                 cp "${data_feats}/org/${dset}/utt2sid" "${data_feats}/${dset}/utt2sid"
